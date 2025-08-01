@@ -1,0 +1,41 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "lint": "eslint .",
+    "security-check": "npm audit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.1.5",
+    "express-session": "^1.18.2",
+    "helmet": "^7.1.0",
+    "multer": "^2.0.2",
+    "mysql2": "^3.14.2",
+    "passport": "^0.7.0",
+    "passport-azure-ad": "^4.3.5",
+    "passport-saml": "^3.2.4",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "axios": "^1.6.0",
+    "eslint": "^8.57.0",
+    "form-data": "^4.0.0",
+    "nodemon": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

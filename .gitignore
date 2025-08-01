@@ -1,0 +1,10 @@
+backend/key.pem
+backend/cert.pem
+backend/.env
+
+key.pem
+cert.pem
+.env
+
+
+*.pem
