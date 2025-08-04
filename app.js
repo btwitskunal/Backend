@@ -7,6 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const logger = require('./utils/logger');
 const { testConnection } = require('./utils/db');
+const passport = require('passport');
 
 const uploadRoutes = require('./routes/upload');
 const templateRoutes = require('./routes/template');
@@ -29,6 +30,19 @@ const sessionConfig = {
 };
 
 const app = express();
+
+// Initialize Passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Passport session configuration
+passport.serializeUser((user, done) => {
+  done(null, user);
+});
+
+passport.deserializeUser((user, done) => {
+  done(null, user);
+});
 
 // Ensure required directories exist
 const uploadsDir = path.join(__dirname, config.upload.uploadsDir);
