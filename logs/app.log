@@ -148,3 +148,47 @@
 {"timestamp":"2025-07-31T17:45:21.331Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
 {"timestamp":"2025-07-31T17:45:24.995Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
 {"timestamp":"2025-07-31T17:45:25.003Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-05T10:10:41.357Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-05T10:10:41.583Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}
+{"timestamp":"2025-08-05T12:15:00.104Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-05T12:15:00.252Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}
+{"timestamp":"2025-08-05T12:15:39.947Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-05T12:15:40.107Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}
+{"timestamp":"2025-08-05T12:17:17.230Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-05T12:17:17.385Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}
+{"timestamp":"2025-08-05T12:17:29.651Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-05T12:17:29.750Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}
+{"timestamp":"2025-08-05T12:17:34.544Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-05T12:17:34.598Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}
+{"timestamp":"2025-08-05T12:18:18.397Z","level":"INFO","message":"SIGTERM received, shutting down gracefully"}
+{"timestamp":"2025-08-05T12:18:18.398Z","level":"INFO","message":"SIGTERM received, shutting down gracefully"}
+{"timestamp":"2025-08-05T12:18:18.400Z","level":"INFO","message":"SIGTERM received, shutting down gracefully"}
+{"timestamp":"2025-08-05T12:20:04.901Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-05T12:20:04.985Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}
+{"timestamp":"2025-08-05T12:23:10.770Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-05T12:23:10.890Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}
+{"timestamp":"2025-08-05T12:23:32.461Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"curl/8.7.1","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-05T12:53:58.055Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-05T12:53:58.074Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-06T06:33:16.955Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-06T06:33:17.008Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-06T06:58:23.527Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-06T06:58:23.646Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}
+{"timestamp":"2025-08-06T06:58:36.675Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-06T06:58:36.716Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-06T06:58:38.052Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-06T06:58:38.057Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-06T07:02:57.679Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-06T07:02:57.812Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}
+{"timestamp":"2025-08-06T07:03:07.461Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-06T07:03:07.484Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-06T07:03:07.588Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-06T07:03:07.630Z","level":"WARN","message":"Security event detected","event":"unauthorized_access","details":{"ip":"::1","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","path":"/profile"},"operation":"security_event"}
+{"timestamp":"2025-08-06T07:03:17.985Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-06T07:03:18.116Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}
+{"timestamp":"2025-08-06T07:03:27.300Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-06T07:03:27.434Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}
+{"timestamp":"2025-08-06T07:03:47.488Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-06T07:03:47.647Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}
+{"timestamp":"2025-08-06T07:17:47.273Z","level":"INFO","message":"Server running on port 4000","environment":"development","port":4000}
+{"timestamp":"2025-08-06T07:17:47.409Z","level":"INFO","message":"Database schema synchronized with template.xlsx"}

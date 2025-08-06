@@ -10,7 +10,8 @@ const sessionConfig = {
   cookie: {
     secure: config.server.nodeEnv === 'production',
     httpOnly: true,
-    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    sameSite: config.server.nodeEnv === 'production' ? 'strict' : 'lax'
   }
 };
 

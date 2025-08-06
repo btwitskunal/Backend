@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 const config = require('./utils/config');
 const express = require('express');
@@ -25,13 +24,21 @@ const sessionConfig = {
   cookie: {
     secure: config.server.nodeEnv === 'production',
     httpOnly: true,
-    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    sameSite: config.server.nodeEnv === 'production' ? 'strict' : 'lax'
   }
 };
 
 const app = express();
 
-// Initialize Passport
+// Body parsing middleware (must come before session)
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
+// Session middleware (must come before Passport)
+app.use(session(sessionConfig));
+
+// Initialize Passport (must come after session)
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -92,16 +99,15 @@ fs.watchFile(TEMPLATE_FILE_PATH, { interval: 1000 }, (curr, prev) => {
 
 // Security middleware
 app.use(cors({ 
-  origin: config.server.nodeEnv === 'production' ? process.env.ALLOWED_ORIGINS?.split(',') : true, 
-  credentials: true 
+  origin: config.server.nodeEnv === 'production' 
+    ? process.env.ALLOWED_ORIGINS?.split(',') 
+    : ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173', 'http://127.0.0.1:3000'], 
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
 }));
 
-// Body parsing middleware
-app.use(express.json({ limit: '10mb' }));
-app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// Session middleware
-app.use(session(sessionConfig));
 
 // Security headers
 app.use((req, res, next) => {
@@ -109,6 +115,17 @@ app.use((req, res, next) => {
   res.setHeader('X-Frame-Options', 'DENY');
   res.setHeader('X-XSS-Protection', '1; mode=block');
   res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+  
+  // Additional CORS headers for preflight requests
+  if (req.method === 'OPTIONS') {
+    res.setHeader('Access-Control-Allow-Origin', req.headers.origin || '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.status(200).end();
+    return;
+  }
+  
   next();
 });
 

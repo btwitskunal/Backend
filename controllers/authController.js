@@ -67,6 +67,9 @@ const samlStrategy = new SamlStrategy(
 // Register SAML strategy with Passport
 passport.use('saml', samlStrategy);
 
+// Export for use in samlMetadata.js
+exports.samlStrategy = samlStrategy;
+
 // Simple authentication controller for testing
 // In production, you would integrate with your actual authentication system
 
@@ -165,7 +168,7 @@ exports.handleSSOCallback = (req, res, next) => {
       });
 
       // Redirect to frontend with success
-      res.redirect(`${process.env.FRONTEND_URL || 'http://localhost:3000'}?login=success`);
+      res.redirect(`${process.env.FRONTEND_URL || 'http://localhost:5173'}?login=success`);
     } catch (error) {
       logger.error('Session setup error after SSO', error);
       res.redirect('/login?error=session_error');
@@ -199,7 +202,7 @@ exports.handleSSOLogoutCallback = (req, res) => {
       });
 
       // Redirect to frontend
-      res.redirect(`${process.env.FRONTEND_URL || 'http://localhost:3000'}?logout=success`);
+      res.redirect(`${process.env.FRONTEND_URL || 'http://localhost:5173'}?logout=success`);
     });
   } catch (error) {
     logger.error('SSO logout callback error', error);

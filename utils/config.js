@@ -9,7 +9,12 @@ const requiredEnvVars = [
   'DB_USER', 
   'DB_PASSWORD',
   'DB_NAME',
-  'PORT'
+  'PORT',
+  'SAML_ENTRY_POINT',
+  'SAML_ISSUER',
+  'SAML_CALLBACK_URL',
+  'SAML_LOGOUT_CALLBACK_URL',
+  'SESSION_SECRET'
 ];
 
 const missingVars = requiredEnvVars.filter(varName => !process.env[varName]);

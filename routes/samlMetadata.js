@@ -2,28 +2,22 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 const path = require('path');
-const { Strategy: SamlStrategy } = require('passport-saml');
-require('dotenv').config();
+const { samlStrategy } = require('../controllers/authController');
 
-// Load certificate
+// Load certificate with try-catch
 const certPath = path.join(__dirname, '../cert.pem');
-const publicCert = fs.readFileSync(certPath, 'utf-8');
+let publicCert;
+try {
+  publicCert = fs.readFileSync(certPath, 'utf-8');
+} catch (err) {
+  console.error('Certificate file missing:', err);
+  publicCert = null;
+}
 
-// Initialize SAML strategy
-const samlStrategy = new SamlStrategy(
-  {
-    entryPoint: process.env.SAML_ENTRY_POINT,
-    issuer: process.env.SAML_ISSUER,
-    callbackUrl: process.env.SAML_CALLBACK_URL,
-    logoutCallbackUrl: process.env.SAML_LOGOUT_CALLBACK_URL,
-    cert: publicCert,
-  },
-  (profile, done) => done(null, profile)
-);
-
-// ✅ Route to generate and serve SAML metadata
+// Route to generate and serve SAML metadata
 router.get('/metadata', (req, res) => {
   try {
+    if (!publicCert) throw new Error('Certificate not loaded');
     const metadata = samlStrategy.generateServiceProviderMetadata(publicCert, null);
     res.type('application/xml');
     res.send(metadata);
