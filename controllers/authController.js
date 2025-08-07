@@ -10,8 +10,9 @@ const certPath = path.join(__dirname, '../cert.pem');
 let publicCert;
 try {
   publicCert = fs.readFileSync(certPath, 'utf-8');
+  logger.info('SAML certificate loaded successfully');
 } catch (error) {
-  logger.warn('SAML certificate not found, using dummy certificate for development');
+  logger.error('SAML certificate not found, using dummy certificate for development', { path: certPath, error: error.message });
   publicCert = '-----BEGIN CERTIFICATE-----\nDUMMY_CERTIFICATE\n-----END CERTIFICATE-----';
 }
 
